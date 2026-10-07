@@ -22,6 +22,22 @@ mongoose
 const { Message } = require('./models/Message')
 const { User } = require('./models/User')
 
+// a route to retrieve the About page profile
+app.get('/about', (req, res) => {
+  res.json({
+    eyebrow: 'ABOUT',
+    title: 'About Us',
+    name: 'Hassan Raza',
+    paragraphs: [
+      "I'm Hassan Raza, a 20-year-old from Karachi, Pakistan, and a junior studying Computer Science at NYU Abu Dhabi. This semester, I'm studying away at NYU's New York campus and getting to know university life in a new city.",
+      "At NYU Abu Dhabi, I worked on research into making machine learning more energy-efficient. I also built Niklo, a guide to places around Karachi. It was nice to work on something connected to the city I grew up in.",
+      'I love playing football and try to get a game in whenever I can.',
+    ],
+    imageUrl: '/hassan-raza.jpeg',
+    imageAlt: 'Hassan smiling in a snowy mountain setting',
+  })
+})
+
 // a route to handle fetching all messages
 app.get('/messages', async (req, res) => {
   // load all messages from database

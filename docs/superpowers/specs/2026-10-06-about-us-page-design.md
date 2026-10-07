@@ -14,17 +14,17 @@ Add an About Us page to the existing MERN exercise app. The page must receive it
 
 ## Design
 
-Add `GET /about` to the Express app. It returns a JSON object with `name`, `paragraphs`, and `imageUrl` fields. The text is static because it describes the app owner and does not need database storage. The image is copied into the frontend public directory. The route returns its root-relative URL, `/hassan-raza.jpeg`, so the browser loads it from the frontend origin.
+Add `GET /about` to the Express app. It returns a JSON object with `eyebrow`, `title`, `name`, `paragraphs`, `imageUrl`, and `imageAlt` fields. The text is static because it describes the app owner and does not need database storage. The image is copied into the frontend public directory. The route returns its root-relative URL, `/hassan-raza.jpeg`, so the browser loads it from the frontend origin.
 
-Add an About page component that requests `/about` with Axios when it loads. It shows a loading message while waiting, a readable error message if the request fails, and the profile once the response arrives. The profile contains a heading, the provided portrait with descriptive alt text, and the paragraphs returned by the API. Add `/about` to the React Router and add an About link to the shared header navigation.
+Add an About page component that requests `/about` with Axios when it loads. It shows a loading message while waiting, a readable error message if the request fails, and the profile once the response arrives. The profile title, eyebrow, name, portrait URL and alt text, and paragraphs all come from the API response. Add `/about` to the React Router and add an About link to the shared header navigation.
 
 ## Bio content
 
 Use three short paragraphs based on the user's facts and CV, with fresh wording:
 
-1. "I'm Hassan Raza, a 20-year-old from Karachi, Pakistan. I'm a junior studying Computer Science at NYU Abu Dhabi, and I'm currently studying away at NYU's New York campus."
-2. "I've explored energy-efficient machine learning through university research, and I built Niklo, a discovery guide for places around Karachi."
-3. "Outside of class and projects, I love playing football."
+1. "I'm Hassan Raza, a 20-year-old from Karachi, Pakistan, and a junior studying Computer Science at NYU Abu Dhabi. This semester, I'm studying away at NYU's New York campus and getting to know university life in a new city."
+2. "At NYU Abu Dhabi, I worked on research into making machine learning more energy-efficient. I also built Niklo, a guide to places around Karachi. It was nice to work on something connected to the city I grew up in."
+3. "I love playing football and try to get a game in whenever I can."
 
 Do not include phone numbers, email addresses, or other CV contact details. Do not copy CV phrasing.
 
